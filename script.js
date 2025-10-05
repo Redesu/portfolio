@@ -60,16 +60,13 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
         if (result.success) {
             response.innerHTML = '<p class="success">Mensagem enviada com sucesso!</p>';
-            console.log('Success:', result);
             this.reset();
         } else {
             response.innerHTML = '<p class="error">Erro ao enviar a mensagem. Tente novamente mais tarde.</p>';
-            console.error('Error:', result);
             this.reset();
         }
     } catch (error) {
         response.innerHTML = '<p class="error">Erro de conexão. Tente novamente mais tarde.</p>';
-        console.error('Error:', error);
         this.reset();
     } finally {
         setTimeout(() => {
