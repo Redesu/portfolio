@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+:root {
+    --primary-color: #00ADB5;
+    --bg-color: #222831;
+    --text-color: #EEEEEE;
+    --secondary-bg: #393E46;
+}
+
+[data-theme="light"] {
+    --primary-color: #00ADB5;
+    --bg-color: #F5F5F5;
+    --text-color: #2C3E50;
+    --secondary-bg: #FFFFFF;
+    --accent-color: #0097A7;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 5%;
+    background: var(--secondary-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+.logo {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+    transition: color 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--primary-color);
+}
+
+.navbar .btn-nav {
+    padding: 0.5rem 1.5rem;
+    color: var(--bg-color) !important;
+    border-radius: 0.4rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.btn:hover {
+    color: #EEEEEE !important;
+    transition: opacity 0.5s;
+}
+
+.menu-icon {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+.section {
+    min-height: 100vh;
+    padding: 10rem 5% 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+h3 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    max-width: 800px;
+    margin-bottom: 1.5rem;
+}
+
+.home {
+    flex-direction: row;
+    gap: 4rem;
+}
+
+.home-content {
+    text-align: left;
+    max-width: 50%;
+}
+
+.home-img img {
+    width: 25vw;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin: 1rem 0.5rem 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+.social-media a:hover {
+    background: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background: var(--primary-color);
+    color: var(--bg-color);
+    border-radius: 0.4rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.projetos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.projeto-box {
+    background: var(--secondary-bg);
+    padding: 2rem;
+    border-radius: 0.8rem;
+    width: 300px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.projeto-box h3 {
+    color: var(--primary-color);
+}
+
+.btn-detalhe {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 1rem;
+    display: block;
+}
+
+.btn-detalhe:hover {
+    color: #EEEEEE;
+    transition: opacity 0.5s;
+}
+
+.contato form {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contato form input,
+.contato form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    background: var(--secondary-bg);
+    border: 2px solid var(--primary-color);
+    border-radius: 0.4rem;
+    margin-bottom: 1rem;
+    outline: none;
+}
+
+.contato form textarea {
+    resize: vertical;
+}
+
+.footer {
+    padding: 1rem 5%;
+    text-align: center;
+    background: var(--secondary-bg);
+    font-size: 0.8rem;
+}
+
+@media (max-width: 1200px) {
+    .header {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 991px) {
+    .section {
+        padding: 10rem 3% 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--secondary-bg);
+        border-top: 1px solid var(--primary-color);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        display: none;
+        flex-direction: column;
+        transition: 0.3s ease-in-out;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .home-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .home-img img {
+        width: 50vw;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+.header.scrolled {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.btn {
+    cursor: pointer;
+}

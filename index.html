@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio</title>
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">Willyan David</a>
+        <nav class="navbar">
+            <a href="#home">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+            <a href="./assets/docs/curriculo.pdf" target="_blank" class="btn btn-nav">Baixar CV</a>
+        </nav>
+        <div id="menu-icon" class="menu-icon"><i class="fas fa-bars"></i></div>
+    </header>
+
+    <main>
+        <section id="home" class="section home">
+            <div class="home-content">
+                <h1>Olá, eu sou Willyan David</h1>
+                <h3>Desenvolvedor Full-stack</h3>
+                <p>Sou um desenvolvedor full stack em formação, apaixonado por transformar ideias em aplicações web
+                    funcionais e
+                    escaláveis. Embora esteja no início da minha jornada profissional, tenho investido tempo construindo
+                    uma base sólida
+                    através de projetos práticos que demonstram minhas habilidades técnicas. Estou sempre em busca de
+                    novos desafios.</p>
+                <div class="social-media">
+                    <a href="https://github.com/Redesu" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/willyan-david-gon%C3%A7alves-40399a167/" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/5562981584257?text=Podemos%20marcar%20uma%20entrevista%3F" target="_blank"><i
+                            class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="home-img">
+                <img src="./assets/images/foto.webp" alt="foto">
+            </div>
+        </section>
+
+        <section id="sobre" class="section sobre">
+            <h2>Sobre Mim</h2>
+            <p>Desenvolvi minha paixão por programação aos 12 anos criando scripts de automação, e desde então venho
+                transformando
+                problemas em soluções através do código. Sou formado em Análise e Desenvolvimento de Sistemas e
+                atualmente atuo como
+                Tester, onde aprofundo diariamente meu entendimento sobre qualidade e ciclo de vida de software.</p>
+            <p>Tenho experiência hands-on com tecnologias modernas como <b>JavaScript/TypeScript, Next.js, Express
+                    JS</b>,
+                e
+                <b>PHP
+                    com Laravel</b>,
+                além de trabalhar com integrações de APIs de terceiros. Meus projetos pessoais refletem minha busca
+                constante por
+                aprender e aplicar as melhores práticas de desenvolvimento full stack.
+            </p>
+            <p>Minha trajetória em suporte técnico me deu uma visão única: entendo as necessidades reais dos usuários e
+                a importância
+                de criar aplicações robustas, testáveis e que realmente resolvam problemas.</p>
+            <a href="./assets/docs/curriculo.pdf" target="_blank" class="btn">Baixar CV</a>
+        </section>
+
+        <section id="projetos" class="section projetos">
+            <h2>Meus Projetos</h2>
+            <div class="projetos-container">
+                <div class="projeto-box">
+                    <h3>NextWrite</h3>
+                    <p>Projeto full-stack de um tech blog com Node, Next, Radix UI, Express e PostgreSQL.</p>
+                    <a href="https://next-write-sable.vercel.app/" target="_blank" class="btn-detalhe">Ver Projeto</a>
+                    <a href="https://github.com/Redesu/NextWrite" target="_blank" class="btn-detalhe">Ver
+                        Repositorio</a>
+                </div>
+                <div class="projeto-box">
+                    <h3>NexAni</a></h3>
+                    <p>Webapp de animes com Next, React e Material UI usando a API do
+                        MyAnimeList.</p>
+                    <a href="https://nexani.vercel.app/" target="_blank" class="btn-detalhe">Ver Projeto</a>
+                    <a href="https://github.com/Redesu/nexani" target="_blank" class="btn-detalhe">Ver Repositorio</a>
+                </div>
+                <div class="projeto-box">
+                    <h3>LaravelTicket</h3>
+                    <p>Projeto de gerenciamento de tickets com Laravel, Vite, MySQL e Tailwind.</p>
+                    <a href="http://3.147.139.243/" target="_blank" class="btn-detalhe">Ver Projeto</a>
+                    <a href="https://github.com/Redesu/LaravelTicket" target="_blank" class="btn-detalhe">Ver
+                        Repositorio</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="section contato">
+            <h2>Entre em Contato</h2>
+            <form action="https://formsubmit.co/willyan.corporativo@gmail.com" method="POST">
+                <input type="text" placeholder="Seu Nome" required>
+                <input type="email" placeholder="Seu Email" required>
+                <textarea cols="30" rows="10" placeholder="Sua Mensagem" required></textarea>
+                <input type="submit" value="Enviar Mensagem" class="btn">
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Willyan David. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
