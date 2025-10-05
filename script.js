@@ -31,3 +31,51 @@ window.onscroll = () => {
         header.classList.remove('scrolled');
     }
 };
+
+document.getElementById('contactForm').addEventListener('submit', async function (event) {
+    event.preventDefault();
+    const btn = this.querySelector('input[type="submit"]');
+    const response = document.getElementById('formResponse');
+
+    btn.value = 'Enviando...';
+    btn.disabled = true;
+
+    const formData = new FormData(this);
+    const data = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        message: formData.get('message')
+    }
+
+    try {
+        const res = await fetch('https://x58we3oo6d.execute-api.us-east-2.amazonaws.com/default/portfolio-contact-form', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await res.json();
+
+        if (result.success) {
+            response.innerHTML = '<p class="success">Mensagem enviada com sucesso!</p>';
+            console.log('Success:', result);
+            this.reset();
+        } else {
+            response.innerHTML = '<p class="error">Erro ao enviar a mensagem. Tente novamente mais tarde.</p>';
+            console.error('Error:', result);
+            this.reset();
+        }
+    } catch (error) {
+        response.innerHTML = '<p class="error">Erro de conexão. Tente novamente mais tarde.</p>';
+        console.error('Error:', error);
+        this.reset();
+    } finally {
+        setTimeout(() => {
+            response.innerHTML = '';
+        }, 5000);
+        btn.value = 'Enviar Mensagem';
+        btn.disabled = false;
+    }
+});

@@ -315,3 +315,11 @@ p {
 .btn {
     cursor: pointer;
 }
+
+.success {
+    color: rgb(10, 226, 10);
+}
+
+.error {
+    color: red;
+}

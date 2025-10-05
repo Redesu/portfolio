@@ -99,12 +99,13 @@
 
         <section id="contato" class="section contato">
             <h2>Entre em Contato</h2>
-            <form action="https://formsubmit.co/willyan.corporativo@gmail.com" method="POST">
-                <input type="text" placeholder="Seu Nome" required>
-                <input type="email" placeholder="Seu Email" required>
-                <textarea cols="30" rows="10" placeholder="Sua Mensagem" required></textarea>
+            <form id="contactForm">
+                <input type="text" placeholder="Seu Nome" name="name" required>
+                <input type="email" placeholder="Seu Email" name="email" required>
+                <textarea cols="30" rows="10" placeholder="Sua Mensagem" name="message" required></textarea>
                 <input type="submit" value="Enviar Mensagem" class="btn">
             </form>
+            <div id="formResponse"></div>
         </section>
     </main>
 
