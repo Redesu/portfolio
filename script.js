@@ -41,6 +41,21 @@ document.getElementById('contactForm').addEventListener('submit', async function
     btn.disabled = true;
 
     const formData = new FormData(this);
+
+    // Honeypot field check
+    if (formData.get('website')) {
+        response.innerHTML = '<p class="error">Erro ao enviar a mensagem. Tente novamente mais tarde.</p>';
+    }
+
+    const token = document.querySelector('[name="cf-turnstile-response"]').value;
+
+    if (!token) {
+        response.innerHTML = '<p class="error">Por favor, complete o captcha.</p>';
+        btn.value = 'Enviar Mensagem';
+        btn.disabled = false;
+        return;
+    }
+
     const data = {
         name: formData.get('name'),
         email: formData.get('email'),
@@ -53,7 +68,12 @@ document.getElementById('contactForm').addEventListener('submit', async function
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: {
+                name: data.name,
+                email: data.email,
+                message: data.message,
+                captchaToken: token
+            }
         });
 
         const result = await res.json();

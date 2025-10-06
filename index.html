@@ -102,7 +102,9 @@
             <form id="contactForm">
                 <input type="text" placeholder="Seu Nome" name="name" required>
                 <input type="email" placeholder="Seu Email" name="email" required>
+                <input type="text" name="website" style="position:absolute;left:-9999px;">
                 <textarea cols="30" rows="10" placeholder="Sua Mensagem" name="message" required></textarea>
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAAB5ANCSsskyzvoUb"></div>
                 <input type="submit" value="Enviar Mensagem" class="btn">
             </form>
             <div id="formResponse"></div>
@@ -114,6 +116,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </body>
 
 </html>
