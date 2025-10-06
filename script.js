@@ -68,12 +68,13 @@ document.getElementById('contactForm').addEventListener('submit', async function
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: {
+            body: JSON.stringify({
                 name: data.name,
                 email: data.email,
                 message: data.message,
+                website: data.website,
                 captchaToken: token
-            }
+            })
         });
 
         const result = await res.json();
