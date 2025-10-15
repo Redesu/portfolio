@@ -97,3 +97,51 @@ document.getElementById('contactForm').addEventListener('submit', async function
         btn.disabled = false;
     }
 });
+
+let lastScroll = 0;
+const whatsappBtn = document.querySelector('.whatsapp-float');
+
+window.addEventListener('scroll', function () {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll && currentScroll > 100) {
+        whatsappBtn.style.opacity = '0';
+        whatsappBtn.style.pointerEvents = 'none';
+    } else {
+        whatsappBtn.style.opacity = '1';
+        whatsappBtn.style.pointerEvents = 'auto';
+    }
+
+
+    lastScroll = currentScroll;
+});
+
+function openLightbox(container) {
+    const img = container.querySelector('img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const caption = document.getElementById('lightbox-caption');
+
+    lightboxImg.src = img.src;
+    caption.textContent = img.getAttribute('data-caption') || img.alt;
+    lightbox.classList.add('active');
+
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.classList.remove('active');
+
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+        closeLightbox();
+    }
+});
+
+document.querySelector('.lightbox-content').addEventListener('click', function (e) {
+    e.stopPropagation();
+});

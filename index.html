@@ -41,6 +41,7 @@
                             class="fab fa-linkedin-in"></i></a>
                     <a href="https://wa.me/5562981584257?text=Podemos%20marcar%20uma%20entrevista%3F" target="_blank"><i
                             class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:willyan.corporativo@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
             <div class="home-img">
@@ -75,6 +76,16 @@
             <div class="projetos-container">
                 <div class="projeto-box">
                     <h3>NextWrite</h3>
+                    <div class="image-container" onclick="openLightbox(this)">
+                        <img src="./assets/images/nextwrite.png" alt="NextWrite" data-caption="NextWrite - Tech Blog">
+                        <div class="zoom-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                                <path d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z" />
+                            </svg>
+                        </div>
+                    </div>
                     <p>Projeto full-stack de um tech blog com Node, Next, Radix UI, Express e PostgreSQL.</p>
                     <a href="https://next-write-sable.vercel.app/" target="_blank" class="btn-detalhe">Ver Projeto</a>
                     <a href="https://github.com/Redesu/NextWrite" target="_blank" class="btn-detalhe">Ver
@@ -82,6 +93,16 @@
                 </div>
                 <div class="projeto-box">
                     <h3>NexAni</a></h3>
+                    <div class="image-container" onclick="openLightbox(this)">
+                        <img src="./assets/images/nexani.png" alt="nexani" data-caption="NexAni - Webapp de animes">
+                        <div class="zoom-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                                <path d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z" />
+                            </svg>
+                        </div>
+                    </div>
                     <p>Webapp de animes com Next, React e Material UI usando a API do
                         MyAnimeList.</p>
                     <a href="https://nexani.vercel.app/" target="_blank" class="btn-detalhe">Ver Projeto</a>
@@ -89,10 +110,29 @@
                 </div>
                 <div class="projeto-box">
                     <h3>LaravelTicket</h3>
+                    <div class="image-container" onclick="openLightbox(this)">
+                        <img src="./assets/images/laravelticket.png" alt="laravelticket"
+                            data-caption="LaravelTicket - Sistema de gerenciamento de chamados">
+                        <div class="zoom-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                                <path d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z" />
+                            </svg>
+                        </div>
+                    </div>
                     <p>Projeto de gerenciamento de tickets com Laravel, Vite, MySQL e Tailwind.</p>
                     <a href="https://redesu.com.br/LaravelTicket" target="_blank" class="btn-detalhe">Ver Projeto</a>
                     <a href="https://github.com/Redesu/LaravelTicket" target="_blank" class="btn-detalhe">Ver
                         Repositorio</a>
+                </div>
+            </div>
+
+            <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                <div class="lightbox-content">
+                    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+                    <img id="lightbox-img" src="" alt="">
+                    <div class="lightbox-caption" id="lightbox-caption"></div>
                 </div>
             </div>
         </section>
@@ -109,7 +149,15 @@
             </form>
             <div id="formResponse"></div>
         </section>
-    <main/>
+    </main>
+
+    <a href="https://wa.me/5562981584257?text=Podemos%20marcar%20uma%20entrevista%3F" class="whatsapp-float"
+        target="_blank" rel="noopener noreferrer">
+        <svg class="whatsapp-icon" viewBox="0 0 32 32">
+            <path
+                d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.245 1.405 1.433-5.245-0.321-0.527c-1.294-2.144-1.977-4.604-1.977-7.14 0-7.444 6.056-13.5 13.5-13.5s13.5 6.056 13.5 13.5c0 7.444-6.056 13.669-13.313 13.669zM21.5 18.5c-0.214 0-2.214-1-2.571-1.143s-0.643-0.214-0.857 0.143c-0.214 0.357-0.857 1.143-1.071 1.357s-0.429 0.286-0.786 0.071c-0.357-0.214-1.5-0.554-2.857-1.768-1.054-0.946-1.768-2.107-1.982-2.464s-0.021-0.536 0.214-0.75c0.214-0.214 0.5-0.536 0.643-0.75s0.286-0.429 0.429-0.714c0.143-0.286 0.071-0.536-0.036-0.75s-0.857-2.036-1.179-2.786c-0.321-0.75-0.643-0.643-0.857-0.643s-0.5-0.036-0.75-0.036-0.679 0.107-1.036 0.536c-0.357 0.429-1.357 1.321-1.357 3.214s1.393 3.75 1.571 4.036c0.214 0.286 2.393 3.786 5.857 5.232 0.821 0.357 1.393 0.536 1.929 0.679 0.821 0.25 1.536 0.214 2.179 0.143 0.643-0.107 2.036-0.857 2.321-1.661s0.286-1.5 0.214-1.661c-0.071-0.214-0.357-0.286-0.714-0.5z" />
+        </svg>
+    </a>
 
     <footer class="footer">
         <p>&copy; 2025 Willyan David. Todos os direitos reservados.</p>
@@ -118,15 +166,15 @@
     <script src="script.js"></script>
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K1GY38CS7J"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1GY38CS7J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-K1GY38CS7J');
-</script>
+        gtag('config', 'G-K1GY38CS7J');
+    </script>
 </body>
 
 </html>
