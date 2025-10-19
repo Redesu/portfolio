@@ -178,6 +178,7 @@ p {
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
+    align-items: stretch;
 }
 
 .projeto-box {
@@ -187,6 +188,7 @@ p {
     width: 300px;
     display: flex;
     flex-direction: column;
+    min-height: 520px;
     justify-content: space-between;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -195,6 +197,7 @@ p {
 .projeto-box h3 {
     color: var(--primary-color);
 }
+
 
 
 .btn-detalhe:hover {
