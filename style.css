@@ -450,7 +450,7 @@ p {
 
 .btn-detalhe {
     display: inline-block;
-    margin: 0 10px 20px 20px;
+    margin: 0 10px 0 0;
     padding: 10px 20px;
     background: var(--primary-color);
     color: var(--bg-color);
@@ -567,4 +567,17 @@ p {
         position: static;
         margin-top: 20px;
     }
+}
+
+.btn-container {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+}
+
+.btn-container .btn-detalhe {
+    margin: 0;
+    width: 100%;
 }
